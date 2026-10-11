@@ -113,4 +113,4 @@ Build command — пусто, Output directory — / (корень).
 
 Дальше
 
-Личный кабинет со списком заявок — на следующих этапах.
+Личный кабинет «Мои заявки» (раздел появляется после входа). Он читает заявки из `AUTOFiX`, заказы из `autofix_repair_orders`, сметы из `autofix_estimate_versions` (без черновиков), позиции из `autofix_estimate_items` и события из `autofix_order_events` (только `visible_to_customer = true`). Решение по смете принимается только через функцию `autofix_decide_estimate` (`approve` или `reject`). Админка для мастера и администратора — на следующем этапе.

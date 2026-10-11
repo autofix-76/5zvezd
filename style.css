@@ -246,6 +246,92 @@ img.is-missing { visibility: hidden; }
   .auth__email { max-width: 100%; flex: 1 1 100%; }
 }
 
+/* 11c. Личный кабинет: «Мои заявки» */
+.cab-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 24px; }
+.cab-toolbar .btn, .cab-card .btn { cursor: pointer; font: inherit; font-weight: 600; }
+.cab-toolbar .btn:disabled, .cab-card .btn:disabled { opacity: .6; cursor: progress; transform: none; }
+.btn.cab-btn--outline { background: transparent; color: var(--red); }
+.btn.cab-btn--outline:hover { background: rgba(179,32,42,.08); color: #8f1922; border-color: #8f1922; }
+
+.cab-list { display: grid; gap: 24px; margin-top: 24px; }
+.cab-muted { color: var(--muted); }
+.cab-note { margin-top: 14px; color: var(--muted); }
+.cab-text { white-space: pre-line; overflow-wrap: anywhere; }
+.cab-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.cab-card {
+  min-width: 0; padding: clamp(18px, 3vw, 28px);
+  background: #fff; border-radius: var(--radius); border-bottom: 3px solid var(--gold);
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+}
+.cab-card__head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 10px 16px; }
+.cab-card__titlebox { min-width: 0; }
+.cab-card__title { font-size: 1.15rem; overflow-wrap: anywhere; }
+.cab-plate {
+  display: inline-block; margin-top: 8px; padding: 2px 10px; border: 1.5px solid var(--ink);
+  border-radius: 4px; font-weight: 600; letter-spacing: .08em; font-size: .95rem;
+}
+
+.cab-badge {
+  display: inline-block; padding: 4px 12px; border-radius: 999px;
+  font-size: .82rem; font-weight: 600; line-height: 1.4; background: #ece8dc; color: var(--text);
+}
+.cab-badge--ok   { background: rgba(29,107,78,.14);  color: var(--green); }
+.cab-badge--warn { background: rgba(201,162,74,.24); color: #7a5a14; }
+.cab-badge--bad  { background: rgba(179,32,42,.12);  color: var(--red); }
+
+.cab-meta { margin: 16px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px 24px; }
+.cab-meta__row { min-width: 0; }
+.cab-meta__row--wide { grid-column: 1 / -1; }
+.cab-meta dt { font-size: .85rem; color: var(--muted); }
+.cab-meta dd { margin: 2px 0 0; font-weight: 500; overflow-wrap: anywhere; }
+.cab-meta--result { padding-top: 14px; border-top: 1px solid #e4dfd2; }
+
+.cab-estimate { margin-top: 22px; padding-top: 18px; border-top: 1px solid #e4dfd2; }
+.cab-details .cab-estimate:first-of-type { border-top: 0; }
+.cab-estimate__head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+.cab-estimate__title { font-size: 1.05rem; }
+
+.cab-table-wrap { margin-top: 16px; }
+.cab-table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.cab-table th { padding: 8px 10px; text-align: left; font-size: .82rem; font-weight: 600; color: var(--muted); border-bottom: 2px solid #e4dfd2; }
+.cab-table td { padding: 10px; border-bottom: 1px solid #eee9dc; vertical-align: top; overflow-wrap: anywhere; }
+.cab-table th:nth-child(n+3), .cab-table td:nth-child(n+3) { text-align: right; white-space: nowrap; }
+
+.cab-total { display: flex; justify-content: flex-end; align-items: baseline; gap: 16px; margin-top: 14px; font-size: 1.1rem; }
+.cab-total strong { font-size: 1.35rem; }
+
+.cab-details { margin-top: 20px; padding-top: 14px; border-top: 1px solid #e4dfd2; }
+.cab-details > summary { cursor: pointer; font-weight: 600; padding: 4px 0; }
+
+.cab-events { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 12px; }
+.cab-events__item { display: grid; gap: 2px; padding-left: 14px; border-left: 3px solid var(--gold); }
+.cab-events__time, .cab-events__role { font-size: .82rem; color: var(--muted); }
+.cab-events__title { font-weight: 600; }
+.cab-events__comment { margin-top: 2px; }
+
+.cab-decision { margin-top: 20px; padding: 18px; background: var(--paper); border-left: 4px solid var(--gold); border-radius: var(--radius); }
+.cab-decision__lead { font-weight: 500; }
+.cab-decision__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
+.cab-decision__panel { margin-top: 16px; padding-top: 16px; border-top: 1px solid #e4dfd2; }
+.cab-decision__panel[hidden] { display: none; }
+.cab-decision__text { font-weight: 500; }
+.cab-decision__panel .field { margin-top: 4px; }
+
+@media (max-width: 640px) {
+  .cab-card__head { flex-direction: column; }
+  .cab-total { justify-content: space-between; }
+  .cab-decision { padding: 14px; }
+  .cab-decision__actions .btn { flex: 1 1 100%; text-align: center; }
+
+  /* таблица позиций превращается в карточки без горизонтальной прокрутки */
+  .cab-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .cab-table, .cab-table tbody, .cab-table tr, .cab-table td { display: block; width: 100%; }
+  .cab-table tr { padding: 10px 0; border-bottom: 1px solid #e4dfd2; }
+  .cab-table td { display: flex; justify-content: space-between; gap: 16px; padding: 3px 0; border: 0; text-align: right !important; white-space: normal !important; }
+  .cab-table td::before { content: attr(data-label); flex: none; color: var(--muted); text-align: left; }
+}
+
 /* 12. Подвал */
 .footer { background: var(--ink); color: rgba(255,255,255,.75); }
 .footer__inner { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; padding: 28px 0; }

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AUTOFiX — автосервис: ремонт, диагностика, обслуживание</title>
+  <meta name="description" content="AUTOFiX — современный автосервис. Ремонт, компьютерная диагностика и техническое обслуживание автомобилей.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. ШАПКА -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="AUTOFiX — на главную">AUTO<span>FiX</span></a>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#cabinet" id="nav-cabinet" class="is-hidden">Мои заявки</a>
+        <a href="#order" class="btn btn--small">Записаться</a>
+        <div class="auth" id="auth-bar">
+          <div class="auth__guest" id="auth-guest">
+            <button type="button" class="btn btn--ghost btn--small" id="auth-open-login">Войти</button>
+            <button type="button" class="btn btn--small" id="auth-open-register">Регистрация</button>
+          </div>
+          <div class="auth__user is-hidden" id="auth-user">
+            <span class="auth__email" id="auth-email"></span>
+            <button type="button" class="btn btn--ghost btn--small" id="auth-logout">Выйти</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="ornament" aria-hidden="true"></div>
+  </header>
+
+  <main id="top">
+
+    <!-- 2. ГЛАВНЫЙ ЭКРАН -->
+    <section class="hero">
+      <div class="hero__ph" aria-hidden="true">
+        <span class="hero__ph-ring hero__ph-ring--1"></span>
+        <span class="hero__ph-ring hero__ph-ring--2"></span>
+        <div class="hero__ph-stage">
+          <div class="car">
+            <span class="car__body"></span>
+            <span class="car__glass"></span>
+            <span class="car__line"></span>
+            <span class="car__light"></span>
+            <span class="car__tail"></span>
+            <span class="car__wheel car__wheel--rear"></span>
+            <span class="car__wheel car__wheel--front"></span>
+          </div>
+          <span class="hero__ph-ground"></span>
+          <div class="hero__ph-tag">
+            <span class="hero__ph-eyebrow">Современный сервис AUTOFiX</span>
+            <span class="hero__ph-word">AUTO<span>FiX</span></span>
+            <strong>Здесь будет фотография современного автосервиса</strong>
+            <small>Изображение будет добавлено позже</small>
+          </div>
+        </div>
+      </div>
+      <img class="hero__img" src="assets/images/hero.jpg" alt="Автомобиль на подъёмнике в сервисе AUTOFiX" fetchpriority="high">
+      <div class="container hero__content">
+        <h1>Ваш автомобиль<br>в надёжных руках</h1>
+        <p class="hero__lead">Ремонт, диагностика и обслуживание с понятными ценами и гарантией на работы.</p>
+        <div class="hero__actions">
+          <a href="#order" class="btn">Записаться на сервис</a>
+          <a href="#services" class="btn btn--ghost">Наши услуги</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. УСЛУГИ -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section__title">Услуги</h2>
+        <p class="section__lead">Основные работы, с которыми к нам приезжают чаще всего.</p>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <div class="card__media"><div class="ph ph--repair" aria-hidden="true"><div class="ph__art"><i class="ph__line"></i><i class="ph__gear"></i></div><div class="ph__label"><strong>Здесь будет фотография ремонта</strong><span>Ремонт и восстановление автомобиля</span></div></div><img src="assets/images/service-repair.jpg" alt="Ремонт автомобиля" loading="lazy"></div>
+            <div class="card__body">
+              <h3>Ремонт</h3>
+              <p>Двигатель, ходовая, тормозная система и кузовные работы.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media"><div class="ph ph--diagnostics" aria-hidden="true"><div class="ph__art"><i class="ph__gauge"></i><i class="ph__needle"></i><i class="ph__ruler"></i></div><div class="ph__label"><strong>Здесь будет фотография диагностики</strong><span>Компьютерная диагностика</span></div></div><img src="assets/images/service-diagnostics.jpg" alt="Компьютерная диагностика" loading="lazy"></div>
+            <div class="card__body">
+              <h3>Диагностика</h3>
+              <p>Компьютерная проверка электроники и точное определение причины неисправности.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__media"><div class="ph ph--maintenance" aria-hidden="true"><div class="ph__art"><i class="ph__drop"></i><i class="ph__bars"></i></div><div class="ph__label"><strong>Здесь будет фотография технического обслуживания</strong><span>ТО и обслуживание</span></div></div><img src="assets/images/service-maintenance.jpg" alt="Техническое обслуживание" loading="lazy"></div>
+            <div class="card__body">
+              <h3>Обслуживание</h3>
+              <p>Замена масла и фильтров, плановое ТО по регламенту производителя.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ПРЕИМУЩЕСТВА -->
+    <section class="section section--dark" id="advantages">
+      <div class="container">
+        <h2 class="section__title">Почему AUTOFiX</h2>
+
+        <ul class="grid grid--4 advantages">
+          <li>
+            <h3>Опытные мастера</h3>
+            <p>Работаем с разными марками и знаем типичные поломки.</p>
+          </li>
+          <li>
+            <h3>Честные цены</h3>
+            <p>Согласуем стоимость до начала работ.</p>
+          </li>
+          <li>
+            <h3>Гарантия</h3>
+            <p>Даём гарантию на выполненные работы и запчасти.</p>
+          </li>
+          <li>
+            <h3>Современное оборудование</h3>
+            <p>Диагностика и ремонт на профессиональном оборудовании.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. ГАЛЕРЕЯ -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <h2 class="section__title">Наш сервис</h2>
+        <p class="section__lead">Мастерская, оборудование и выполненные работы.</p>
+
+        <div class="gallery">
+          <figure><div class="ph ph--shop" aria-hidden="true"><div class="ph__art"><i class="ph__beam"></i><i class="ph__post ph__post--l"></i><i class="ph__post ph__post--r"></i><i class="ph__arm"></i><i class="ph__floor"></i></div><div class="ph__label"><strong>Здесь будет фотография сервиса</strong><span>Рабочая зона AUTOFiX</span></div></div><img src="assets/images/gallery-1.jpg" alt="Рабочая зона автосервиса" loading="lazy"></figure>
+          <figure><div class="ph ph--tools" aria-hidden="true"><div class="ph__art"><i class="ph__wr ph__wr--1"></i><i class="ph__wr ph__wr--2"></i><i class="ph__nut"></i></div><div class="ph__label"><strong>Здесь будет фотография процесса ремонта</strong><span>Работа мастера</span></div></div><img src="assets/images/gallery-2.jpg" alt="Инструменты механика" loading="lazy"></figure>
+          <figure><div class="ph ph--done" aria-hidden="true"><div class="ph__art"><i class="ph__beam ph__beam--car"></i><div class="car car--mini"><span class="car__body"></span><span class="car__glass"></span><span class="car__line"></span><span class="car__light"></span><span class="car__tail"></span><span class="car__wheel car__wheel--rear"></span><span class="car__wheel car__wheel--front"></span></div><i class="ph__check"></i></div><div class="ph__label"><strong>Здесь будет фотография автомобиля</strong><span>Автомобиль после обслуживания</span></div></div><img src="assets/images/gallery-3.jpg" alt="Диагностика автомобиля" loading="lazy"></figure>
+          <figure><div class="ph ph--lounge" aria-hidden="true"><div class="ph__art"><i class="ph__win"></i><i class="ph__sofa"></i><i class="ph__cup"></i></div><div class="ph__label"><strong>Здесь будет фотография клиентской зоны</strong><span>Комфортная зона ожидания</span></div></div><img src="assets/images/gallery-4.jpg" alt="Мастер за работой" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5a. ЗАЯВКА НА СЕРВИС -->
+    <section class="section section--dark" id="order">
+      <div class="container">
+        <h2 class="section__title">Заявка на сервис</h2>
+        <p class="section__lead">Опишите, что нужно сделать с автомобилем, — мы свяжемся с вами и подтвердим время.</p>
+        <p class="form__msg form__msg--error" id="order-auth-hint" hidden>Чтобы отправить заявку, войдите в аккаунт или зарегистрируйтесь — кнопки вверху справа.</p>
+
+        <form class="order__form" id="order-form" novalidate>
+          <div class="field">
+            <label for="f-name">Имя</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="100">
+          </div>
+          <div class="field">
+            <label for="f-phone">Телефон</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required maxlength="30" placeholder="+7 (___) ___-__-__">
+          </div>
+          <div class="field field--wide">
+            <label for="f-email">Электронная почта</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="150">
+          </div>
+          <div class="field">
+            <label for="f-brand">Марка автомобиля</label>
+            <input id="f-brand" name="car_brand" type="text" required maxlength="60">
+          </div>
+          <div class="field">
+            <label for="f-model">Модель</label>
+            <input id="f-model" name="car_model" type="text" required maxlength="60">
+          </div>
+          <div class="field">
+            <label for="f-year">Год выпуска</label>
+            <input id="f-year" name="car_year" type="number" inputmode="numeric" min="1950" step="1" required>
+          </div>
+          <div class="field">
+            <label for="f-service">Услуга</label>
+            <select id="f-service" name="service" required>
+              <option value="" selected disabled>Выберите услугу</option>
+              <option value="repair">Ремонт</option>
+              <option value="diagnostics">Диагностика</option>
+              <option value="maintenance">Обслуживание</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-plate">Государственный номер автомобиля</label>
+            <input id="f-plate" name="license_plate" type="text" required maxlength="14"
+                   autocomplete="off" autocapitalize="characters" spellcheck="false"
+                   placeholder="А123ВС777" aria-describedby="plate-hint plate-error">
+            <small class="field__hint" id="plate-hint">Например: А123ВС777. Только русские буквы.</small>
+            <p class="field__error" id="plate-error" role="alert" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-date">Желаемая дата</label>
+            <input id="f-date" name="preferred_date" type="date" required>
+          </div>
+          <div class="field field--wide">
+            <label for="f-desc">Описание проблемы</label>
+            <textarea id="f-desc" name="description" maxlength="2000" placeholder="Что случилось и когда началось"></textarea>
+          </div>
+          <div class="order__actions">
+            <button type="submit" class="btn" id="order-submit">Отправить заявку</button>
+            <p class="form__msg" id="order-msg" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 5b. МОИ ЗАЯВКИ (личный кабинет клиента) -->
+    <section class="section is-hidden" id="cabinet" aria-labelledby="cabinet-title">
+      <div class="container">
+        <h2 class="section__title" id="cabinet-title">Мои заявки</h2>
+        <p class="section__lead">Статус ремонта, смета и история по вашим заявкам. Ремонт начинается только после того, как вы согласуете смету.</p>
+
+        <div class="cab-toolbar">
+          <button type="button" class="btn cab-btn--outline" id="cabinet-refresh">Обновить</button>
+          <p class="form__msg" id="cabinet-status" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="cab-list" id="cabinet-list"></div>
+      </div>
+    </section>
+
+    <!-- 6. КОНТАКТЫ -->
+    <section class="section section--light" id="contacts">
+      <div class="container contacts">
+        <div>
+          <h2 class="section__title">Контакты</h2>
+          <p class="section__lead">Позвоните или приезжайте — подскажем и запишем на удобное время.</p>
+          <a href="tel:+70000000000" class="btn">Позвонить</a>
+        </div>
+        <dl class="contacts__list">
+          <div><dt>Телефон</dt><dd><a href="tel:+70000000000">+7 (000) 000-00-00</a></dd></div>
+          <div><dt>Адрес</dt><dd>Город, улица, дом (заменить на реальный)</dd></div>
+          <div><dt>Часы работы</dt><dd>Пн–Сб, 9:00–20:00</dd></div>
+          <div><dt>Почта</dt><dd><a href="mailto:info@autofix.example">info@autofix.example</a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 7. ПОДВАЛ -->
+  <footer class="footer">
+    <div class="ornament" aria-hidden="true"></div>
+    <div class="container footer__inner">
+      <a href="#top" class="logo">AUTO<span>FiX</span></a>
+      <p>© <span id="year">2026</span> AUTOFiX. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <dialog class="auth-dialog" id="auth-dialog" aria-labelledby="auth-dialog-title">
+    <div class="auth-dialog__head">
+      <h2 class="auth-dialog__title" id="auth-dialog-title">Вход</h2>
+      <button type="button" class="auth-dialog__close" id="auth-dialog-close" aria-label="Закрыть">×</button>
+    </div>
+    <div class="auth-dialog__tabs">
+      <button type="button" class="auth-dialog__tab is-active" id="auth-tab-login">Войти</button>
+      <button type="button" class="auth-dialog__tab" id="auth-tab-register">Регистрация</button>
+    </div>
+
+    <form class="auth-dialog__form" id="login-form">
+      <div class="field field--wide">
+        <label for="login-email">Электронная почта</label>
+        <input id="login-email" name="email" type="email" autocomplete="username" required maxlength="150">
+      </div>
+      <div class="field field--wide">
+        <label for="login-password">Пароль</label>
+        <input id="login-password" name="password" type="password" autocomplete="current-password" required minlength="6">
+      </div>
+      <div class="order__actions">
+        <button type="submit" class="btn" id="login-submit">Войти</button>
+        <p class="form__msg" id="login-msg" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+
+    <form class="auth-dialog__form is-hidden" id="register-form">
+      <div class="field field--wide">
+        <label for="register-email">Электронная почта</label>
+        <input id="register-email" name="email" type="email" autocomplete="email" required maxlength="150">
+      </div>
+      <div class="field field--wide">
+        <label for="register-password">Пароль</label>
+        <input id="register-password" name="password" type="password" autocomplete="new-password" required minlength="6">
+      </div>
+      <div class="field field--wide">
+        <label for="register-password2">Повторите пароль</label>
+        <input id="register-password2" name="password2" type="password" autocomplete="new-password" required minlength="6">
+      </div>
+      <div class="order__actions">
+        <button type="submit" class="btn" id="register-submit">Зарегистрироваться</button>
+        <p class="form__msg" id="register-msg" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
