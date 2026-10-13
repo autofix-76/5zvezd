@@ -1,5 +1,7 @@
 // ============================================
-// AUTOFiX — основной JavaScript
+// Пять звёзд — основной JavaScript
+// (имя таблицы 'AUTOFiX' и функции autofix_* ниже — это
+// названия в базе данных Supabase, их менять нельзя)
 // ============================================
 
 // ---------- Мобильное меню ----------
@@ -728,7 +730,7 @@ const EVENT_TYPE_LABELS = {
   order_cancelled: 'Заказ отменён'
 };
 
-// Цвет значка статуса: ok — зелёный, warn — золотой, bad — красный
+// Цвет значка статуса: ok — зелёный, warn — жёлтый, bad — красный
 const STATUS_TONES = {
   approved: 'ok', completed: 'ok',
   awaiting_approval: 'warn', sent: 'warn', in_progress: 'warn',
