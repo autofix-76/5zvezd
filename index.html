@@ -377,9 +377,27 @@
               <div><dt>ВКонтакте</dt><dd><a href="https://vk.ru/z5autoru" target="_blank" rel="noopener noreferrer">vk.ru/z5autoru</a></dd></div>
               <div><dt>Регион</dt><dd>Тутаевский муниципальный округ, Ярославская область</dd></div>
               <!-- TODO: точный адрес -->
-              <div><dt>Адрес</dt><dd class="contacts__todo">Будет добавлен после уточнения</dd></div>
+              <div>
+  <dt>Координаты</dt>
+  <dd>57.849218, 39.553010</dd>
+</div>
               <!-- TODO: подтверждённый график работы -->
-              <div><dt>Часы работы</dt><dd class="contacts__todo">Будут добавлены после уточнения</dd></div>
+              
+<div>
+  <dt>График работы</dt>
+  <dd>
+    <ul class="working-hours" style="list-style: none; padding: 0; margin: 0;">
+      <li><span>Понедельник</span><span>09:00–20:00</span></li>
+      <li><span>Вторник</span><span>09:00–20:00</span></li>
+      <li><span>Среда</span><span>09:00–20:00</span></li>
+      <li><span>Четверг</span><span>09:00–20:00</span></li>
+      <li><span>Пятница</span><span>09:00–20:00</span></li>
+      <li><span>Суббота</span><span>09:00–20:00</span></li>
+      <li><span>Воскресенье</span><span>09:00–20:00</span></li>
+    </ul>
+  </dd>
+</div>
+
               <!-- TODO: электронная почта (добавьте строку <div><dt>Почта</dt><dd><a href="mailto:…">…</a></dd></div>) -->
             </dl>
             <div class="contacts__actions">
@@ -389,11 +407,28 @@
           </div>
 
           <!-- TODO: после уточнения адреса замените этот блок на карту или ссылку «Построить маршрут» -->
-          <div class="map-ph">
-            <svg class="ph__icon" aria-hidden="true"><use href="#i-photo"/></svg>
-            <p>Здесь появится карта или ссылка на маршрут после уточнения адреса.</p>
-          </div>
-        </div>
+          
+<div class="map-ph" style="padding: 0; overflow: hidden;">
+  <iframe
+    src="https://maps.google.com/maps?q=57.849218,39.553010&z=15&output=embed"
+    title="Расположение автосервиса Пять звёзд"
+    width="100%"
+    height="380"
+    style="display: block; width: 100%; border: 0;"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+
+  <div style="padding: 16px;">
+    <a
+      href="https://www.google.com/maps/dir/?api=1&destination=57.849218,39.553010"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn">
+      Построить маршрут
+    </a>
+  </div>
+</div>
       </div>
     </section>
 
